@@ -10,8 +10,8 @@ app.get('/', function (req, res) {
 });
 
 app.get('/oi', function (req, res){
-    res.send('Olá usuário!')
-    req.get()
+    res.send('Olá usuário!');
+    req.get();
 });
 
 let herois = ["Flash", "Batman", "Super Shock", "Ciborg", "Viuva-Negra"];
