@@ -5,13 +5,14 @@
   "main": "index.js",
   "scripts": {
     "start": "node index",
-    "dev":  "nodemon index"
+    "dev": "nodemon index"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "mongodb": "^4.2.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.15"
