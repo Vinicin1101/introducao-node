@@ -15,13 +15,16 @@ const dbName =  "ocean-backend";
 
 // Função principal (assincrona)
 async function main() {
-
+    /*
     // conexão com o banco de dados
     const client = await MongoClient.connect(url);
     const db = client.db(dbName);
 
     //    Procurar pelas collection que criamos
     const collection = db.collection('herois');
+    */
+
+    const collection = undefined;
 
     // Requisições
     app.get('/', function (req, res) {
@@ -85,7 +88,7 @@ async function main() {
     });
 
 
-    app.listen(3000);
+    app.listen(process.env.PORT || 3000);
 }
 
 // Leitura da função principal
