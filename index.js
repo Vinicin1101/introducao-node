@@ -1,8 +1,5 @@
 const express = require('express');
 
-// Definindo o corpo do requerimento como Json
-app.use(express.json());
-
 //    Instalar o MongoDB (npm install mongodb)
 
 //    Impostar o MongoDB
@@ -14,7 +11,6 @@ const dbName =  "ocean-backend-nuvem";
 
 // Função principal (assincrona)
 async function main() {
-    
     // conexão com o banco de dados
     const client = await MongoClient.connect(url);
     const db = client.db(dbName);
@@ -23,6 +19,8 @@ async function main() {
     const collection = db.collection('herois');
 
     const app = express();
+    // Definindo o corpo do requerimento como Json
+    app.use(express.json());
 
     // Requisições
     app.get('/', function (req, res) {
