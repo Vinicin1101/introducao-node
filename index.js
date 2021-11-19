@@ -1,5 +1,4 @@
 const express = require('express');
-const app = express();
 
 // Definindo o corpo do requerimento como Json
 app.use(express.json());
@@ -10,21 +9,20 @@ app.use(express.json());
 const {MongoClient, ObjectId} = require('mongodb');
 
 //    Realizar a conexão com o o Banco de Dados
-const url = "mongodb://localhost:27017";
-const dbName =  "ocean-backend";
+const url = "mongodb+srv://vinicin:pQGU7fRiuhxzE523@cluster0.mt4ek.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+const dbName =  "ocean-backend-nuvem";
 
 // Função principal (assincrona)
 async function main() {
-    /*
+    
     // conexão com o banco de dados
     const client = await MongoClient.connect(url);
     const db = client.db(dbName);
 
     //    Procurar pelas collection que criamos
     const collection = db.collection('herois');
-    */
 
-    const collection = undefined;
+    const app = express();
 
     // Requisições
     app.get('/', function (req, res) {
