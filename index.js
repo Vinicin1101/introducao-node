@@ -3,11 +3,11 @@ const express = require('express');
 //    Instalar o MongoDB (npm install mongodb)
 
 //    Impostar o MongoDB
-const {MongoClient, ObjectId} = require('mongodb');
+const { MongoClient, ObjectId } = require('mongodb');
 
 //    Realizar a conexão com o o Banco de Dados
 const url = "mongodb+srv://vinicin:pQGU7fRiuhxzE523@cluster0.mt4ek.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
-const dbName =  "ocean-backend-nuvem";
+const dbName = "ocean-backend-nuvem";
 
 // Função principal (assincrona)
 async function main() {
@@ -24,7 +24,7 @@ async function main() {
 
     // Requisições
     app.get('/', function (req, res) {
-    res.send('Olá Mundo! <a href="herois">Vejas os Heróis</a>');
+        res.send('Olá Mundo! <a href="herois">Vejas os Heróis</a>');
 
     });
 
@@ -60,7 +60,7 @@ async function main() {
     });
 
     // [PUT] "/herois/update/:id" - change
-    app.put('/herois/update/:id', async function (req, res){
+    app.put('/herois/update/:id', async function (req, res) {
         const id = req.params.id;
         const item = req.body;
 
@@ -77,8 +77,8 @@ async function main() {
 
     // [] "/herois/delete" - remove from array
     app.delete('/herois/delete/:id', async function (req, res) {
-        
-        await collection.deleteOne({_id: new ObjectId(id)})
+
+        await collection.deleteOne({ _id: new ObjectId(id) })
 
         res.send('Removido!');
     });
